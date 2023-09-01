@@ -4,7 +4,7 @@
 
 QuizAI is an intelligent quiz platform designed to revolutionize the way quizzes are conducted and taken. Utilizing advanced Natural Language Processing (NLP) and Machine Learning (ML) technologies, QuizAI aims to provide a more interactive and adaptive quiz environment.
 
-![screenshot.png](Screenshot)
+![screenshot.PNG](Screenshot)
 
 
 ## Features
