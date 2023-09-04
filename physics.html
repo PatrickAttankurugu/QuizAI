@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Quiz - Quiz.AI</title>
+  <link rel="stylesheet" href="css/physics.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+          <a href="index.html" aria-label="Home">
+              <img src="images/logo.png" alt="Quiz.AI Logo" width="150">
+          </a>
+      </div>
+      <ul class="nav-links">
+          <li><a href="index.html" role="menuitem">Home</a></li>
+          <li><a href="#categories" role="menuitem">Categories</a></li>
+          <li><a href="#leaderboard" role="menuitem">Leaderboard</a></li>
+          <li><a href="#profile" role="menuitem">Profile</a></li>
+      </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="quiz-container">
+    <h1>Physics Quiz</h1>
+
+    <!-- Multiple Choice Questions -->
+    <section id="multiple-choice-questions" class="quiz-section">
+      <h2>Multiple Choice Questions</h2>
+      
+      <!-- Question 1 -->
+      <div class="question" id="mcq-1">
+        <p class="question-text">What is the speed of light?</p>
+        <ul class="options">
+          <li><input type="radio" name="mcq-1" value="a"> 3 x 10<sup>8</sup> m/s</li>
+          <li><input type="radio" name="mcq-1" value="b"> 2 x 10<sup>8</sup> m/s</li>
+          <li><input type="radio" name="mcq-1" value="c"> 5 x 10<sup>8</sup> m/s</li>
+          <li><input type="radio" name="mcq-1" value="d"> 1 x 10<sup>8</sup> m/s</li>
+        </ul>
+        <button class="submit-answer" data-question="mcq-1">Submit</button>
+      </div>
+      
+      <!-- Question 2 -->
+      <div class="question" id="mcq-2">
+        <p class="question-text">What is the atomic number of Hydrogen?</p>
+        <ul class="options">
+          <li><input type="radio" name="mcq-2" value="a"> 0</li>
+          <li><input type="radio" name="mcq-2" value="b"> 1</li>
+          <li><input type="radio" name="mcq-2" value="c"> 2</li>
+          <li><input type="radio" name="mcq-2" value="d"> 3</li>
+        </ul>
+        <button class="submit-answer" data-question="mcq-2">Submit</button>
+      </div>
+    </section>
+
+    <!-- Fill in the Blank Questions -->
+    <section id="fill-in-questions" class="quiz-section">
+      <h2>Fill in the Blanks</h2>
+      
+      <!-- Question 1 -->
+      <div class="question" id="fib-1">
+        <p class="question-text">The gravitational constant is represented by the letter ____.</p>
+        <input type="text" class="fill-in-answer">
+        <button class="submit-answer" data-question="fib-1">Submit</button>
+      </div>
+      
+      <!-- Question 2 -->
+      <div class="question" id="fib-2">
+        <p class="question-text">The unit of force is ____.</p>
+        <input type="text" class="fill-in-answer">
+        <button class="submit-answer" data-question="fib-2">Submit</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/physics.js"></script>
+
+</body>
+</html>
