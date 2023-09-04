@@ -1,0 +1,206 @@
+/* Reset default styles */
+body, h1, h2, h3, ul, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set global styles and dark theme */
+  body {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #D4D4D4;
+  }
+  
+  /* Navbar Styles */
+  #navbar {
+    background-color: #252526;
+    color: #D4D4D4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    transition: all 0.3s ease;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Logo */
+  #navbar .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #FFFFFF;
+  }
+  
+  /* Mobile Responsiveness */
+  @media only screen and (max-width: 768px) {
+    #navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .nav-links li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Chemistry Questions Container */
+#chemistry-questions {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /* Headings */
+  #chemistry-questions h2 {
+    color: #999393;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Questions */
+  .question {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  /* Multiple Choice Questions */
+  .mcq label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Fill in the Blank Questions */
+  .fib input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Submit Button */
+  #submit-answers {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submit-answers:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (min-width: 600px) {
+    .question {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    #chemistry-questions {
+      padding: 40px;
+    }
+  }
+  
+
+  
+  /* Footer */
+  #footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif; 
+  
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-about {
+    flex: 2;
+  }
+  
+  .footer-follow-us {
+    flex: 1;
+    padding-right: 320px; /* Padding to avoid overlap with chat window */
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p {
+    margin: 0;
+  }
+  
+  /* Social Icons */
+  .social-icons span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .social-icons i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .social-icons a:last-child i {
+    margin-right: 0;
+  }
+  

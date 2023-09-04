@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chemistry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     
@@ -35,7 +35,7 @@
     <!-- Navbar -->
     <nav id="navbar" role="navigation" aria-label="Main Navigation">
         <div class="logo">
-            <a href="#homepage" aria-label="Home">
+            <a href="index.html" aria-label="Home">
                 <img src="images/logo.png" alt="Quiz.AI Logo" width="150">
             </a>
         </div>
@@ -48,69 +48,42 @@
         </ul>
     </nav>
 
-<!-- Homepage -->
-<section id="homepage">
-    <h1>Welcome to QuizAI</h1>
-    <p>A science and maths quiz platform, powered by GPT-3.5 Turbo.</p>
+
+
+
+<!-- Chemistry Questions Section -->
+<section id="chemistry-questions" role="main">
+    <h2>Chemistry Quiz</h2>
+    
+    <!-- Multiple Choice Questions -->
+    <div class="question mcq" id="mcq1">
+        <p>1. Which of the following elements is a metalloid?</p>
+        <label><input type="radio" name="q1" value="A"> A. Sodium</label>
+        <label><input type="radio" name="q1" value="B"> B. Silicon</label>
+        <label><input type="radio" name="q1" value="C"> C. Oxygen</label>
+        <label><input type="radio" name="q1" value="D"> D. Chlorine</label>
+    </div>
+
+    <div class="question mcq" id="mcq2">
+        <p>2. Which gas is evolved when sodium reacts with water?</p>
+        <label><input type="radio" name="q2" value="A"> A. Hydrogen</label>
+        <label><input type="radio" name="q2" value="B"> B. Oxygen</label>
+        <label><input type="radio" name="q2" value="C"> C. Nitrogen</label>
+        <label><input type="radio" name="q2" value="D"> D. Chlorine</label>
+    </div>
+
+    <!-- Fill in the Blank Questions -->
+    <div class="question fib" id="fib1">
+        <p>3. The atomic number of carbon is <input type="text" id="q3" placeholder="Your Answer">.</p>
+    </div>
+
+    <div class="question fib" id="fib2">
+        <p>4. Water has a pH level of <input type="text" id="q4" placeholder="Your Answer"> under normal conditions.</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="submit-answers" aria-label="Submit Answers">Submit Answers</button>
 </section>
-
-<!-- Categories Section -->
-<section id="categories">
-    <h2>Select a Subject to Start the Quiz</h2>
-    <div class="category" id="maths">
-        <a href="maths.html" role="button">
-            <h3>Maths</h3>
-        </a>
-    </div>
-    <div class="category" id="biology">
-        <a href="biology.html" role="button">
-            <h3>Biology</h3>
-        </a>
-    </div>
-    <div class="category" id="physics">
-        <a href="physics.html" role="button">
-            <h3>Physics</h3>
-        </a>
-    </div>
-    <div class="category" id="chemistry">
-        <a href="chemistry.html" role="button">
-            <h3>Chemistry</h3>
-        </a>
-    </div>
-</section>
-
-
- <!-- AI Chat -->
- <div id="ai-chat" role="complementary" aria-label="AI Chat Support">
-    <div class="chat-header">
-        <h3>AI Chat Support</h3>
-        <div class="chat-controls">
-            <button id="maximize-chat" aria-label="Maximize Chat">
-                <i class="fas fa-window-maximize"></i>
-            </button>
-            <button id="minimize-chat" aria-label="Minimize Chat">
-                <i class="fas fa-window-minimize"></i>
-            </button>
-            <button id="close-chat" aria-label="Close Chat">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-    <div class="chat-window" id="chat-window" role="log" aria-live="polite">
-        <!-- Chat messages will be inserted here -->
-    </div>
-    <div class="chat-input" role="form">
-        <label for="chat-message" class="sr-only">Type your message:</label>
-        <input type="text" id="chat-message" placeholder="Type your message..." aria-required="true">
-        <button id="send-message" aria-label="Send Message">
-            <i class="fas fa-paper-plane"></i>
-        </button>
-    </div>
-         
-</div>
-<button id="reopen-chat" class="hidden" aria-label="Reopen Chat">
-    <i class="fas fa-comments"></i>
-  </button>
 
 
 <!-- Footer -->
@@ -137,10 +110,6 @@
         </div>
     </div>
 </footer>
-
-
-
-
 
   <!-- Scripts -->
   <script src="js/script.js"></script>

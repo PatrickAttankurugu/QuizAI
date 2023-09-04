@@ -5,83 +5,284 @@ body {
     padding: 0;
     background-color: #f4f4f4;
   }
-  
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  /* Question Styles */
-  .question {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 20px 0;
-    padding: 20px;
-  }
-  
-  .question h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  /* Multiple Choice Question Styles */
-  .mcq-options {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .mcq-options li {
-    margin: 10px 0;
-  }
-  
-  .mcq-options input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  /* Fill-in-the-blank Question Styles */
-  .fill-in {
+
+  /* Navbar Styles */
+  #navbar {
+    background-color: #252526;
+    color: #D4D4D4;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    transition: all 0.3s ease;
   }
   
-  .fill-in input[type="text"] {
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  #navbar a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Logo */
+  #navbar .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    position: relative;
     padding: 10px;
-    margin-top: 10px;
-    width: 100%;
+    transition: color 0.3s ease;
   }
   
-  /* Buttons */
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #FFFFFF;
+  }
+  
+  /* Mobile Responsiveness */
+  @media only screen and (max-width: 768px) {
+    #navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .nav-links li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Container */
+#quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Quiz Sections */
+.quiz-section {
+  margin-bottom: 40px;
+}
+
+/* Questions */
+.question {
+  margin-bottom: 30px;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Multiple Choice Options */
+.options {
+  list-style: none;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Fill in the blanks */
+.fill-in-answer {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.submit-answer {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-answer:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media only screen and (min-width: 600px) {
+  .question-text, .options li, .fill-in-answer {
+    font-size: 20px;
+  }
+}
+
+/* Radio buttons styling */
+.options input[type="radio"] {
+  display: none;
+}
+
+.options input[type="radio"] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.options input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #007BFF;
+}
+
+.options input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #007BFF;
+}
+
+/* Focus states for better accessibility */
+.options input[type="radio"]:focus + label:before,
+.fill-in-answer:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Animation for smoother transitions */
+.question, .submit-answer, .fill-in-answer, .options li {
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on questions for better UX */
+.question:hover {
+  background-color: #f9f9f9;
+}
+
+/* More Advanced Responsive Design */
+@media only screen and (min-width: 768px) {
+  #quiz-container {
+    padding: 40px;
+  }
+
+  .options li {
+    display: inline-block;
+    width: 45%;
+    margin-right: 5%;
+  }
+
+  .options li:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .fill-in-answer {
+    width: 50%;
+  }
+
   .submit-answer {
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
   }
-  
-  .submit-answer:hover {
-    background-color: #0056b3;
+}
+
+@media only screen and (min-width: 1024px) {
+  .options li {
+    width: 22%;
+    margin-right: 3%;
   }
-  
-  /* Media Queries for larger screens */
-  @media screen and (min-width: 768px) {
-    .container {
-      padding: 40px;
-    }
-  
-    .question h2 {
-      font-size: 1.4em;
-    }
-  
-    .fill-in input[type="text"] {
-      width: 50%;
-    }
+
+  .options li:nth-child(4n) {
+    margin-right: 0;
   }
-  
+}
+
+/* Footer */
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif; 
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-about {
+  flex: 2;
+}
+
+.footer-follow-us {
+  flex: 1;
+  padding-right: 320px; /* Padding to avoid overlap with chat window */
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+/* Social Icons */
+.social-icons span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.social-icons i {
+  font-size: 1.2em;
+  margin-right: 10px;
+  color: #fff;
+}
+.social-icons a:last-child i {
+  margin-right: 0;
+}

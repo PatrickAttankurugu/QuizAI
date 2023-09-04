@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Welcome to Quiz.AI - Your ultimate destination for challenging science quizzes, powered by AI.">
+    <meta name="keywords" content="Quiz, Science, AI, Machine Learning, Biology, Physics, Chemistry">
+    <meta name="author" content="Patrick Attankurugu, Joseph Adasoogo">
+
+    <!-- For social media -->
+    <meta property="og:title" content="Quiz.AI - The AI-Powered Science Quiz Platform">
+    <meta property="og:description" content="Take challenging science quizzes in various categories like Biology, Physics, and Chemistry!">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta property="og:url" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    
+    <title>Quiz.AI - The AI-Powered Science Quiz Platform</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="logo">
+            <a href="#homepage" aria-label="Home">
+                <img src="images/logo.png" alt="Quiz.AI Logo" width="150">
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#homepage" role="menuitem">Home</a></li>
+            <li><a href="#categories" role="menuitem">Categories</a></li>
+            <li><a href="#leaderboard" role="menuitem">Leaderboard</a></li>
+            <li><a href="#profile" role="menuitem">Profile</a></li>
+        </ul>
+    </nav>
+
+<!-- Homepage -->
+<section id="homepage">
+    <h1>Welcome to QuizAI</h1>
+    <p>A science and maths quiz platform, powered by GPT-3.5 Turbo.</p>
+</section>
+
+<!-- Categories Section -->
+<section id="categories">
+    <h2>Select a Subject to Start the Quiz</h2>
+    <div class="category" id="maths">
+        <a href="maths.html" role="button">
+            <h3>Maths</h3>
+        </a>
+    </div>
+    <div class="category" id="biology">
+        <a href="biology.html" role="button">
+            <h3>Biology</h3>
+        </a>
+    </div>
+    <div class="category" id="physics">
+        <a href="physics.html" role="button">
+            <h3>Physics</h3>
+        </a>
+    </div>
+    <div class="category" id="chemistry">
+        <a href="chemistry.html" role="button">
+            <h3>Chemistry</h3>
+        </a>
+    </div>
+</section>
+
+
+ <!-- AI Chat -->
+ <div id="ai-chat" role="complementary" aria-label="AI Chat Support">
+    <div class="chat-header">
+        <h3>AI Chat Support</h3>
+        <div class="chat-controls">
+            <button id="maximize-chat" aria-label="Maximize Chat">
+                <i class="fas fa-window-maximize"></i>
+            </button>
+            <button id="minimize-chat" aria-label="Minimize Chat">
+                <i class="fas fa-window-minimize"></i>
+            </button>
+            <button id="close-chat" aria-label="Close Chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="chat-window" id="chat-window" role="log" aria-live="polite">
+        <!-- Chat messages will be inserted here -->
+    </div>
+    <div class="chat-input" role="form">
+        <label for="chat-message" class="sr-only">Type your message:</label>
+        <input type="text" id="chat-message" placeholder="Type your message..." aria-required="true">
+        <button id="send-message" aria-label="Send Message">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+         
+</div>
+<button id="reopen-chat" class="hidden" aria-label="Reopen Chat">
+    <i class="fas fa-comments"></i>
+  </button>
+
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo">
+    <div class="footer-container">
+        <div class="footer-section footer-about">
+            <h4>About Us</h4>
+            <p>An AI-Powered science and maths quiz platform.</p>
+        </div>
+        <div class="footer-section footer-follow-us">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <span>Patrick Attankurugu: </span>
+                <a href="https://web.facebook.com/profile.php?id=100077220122659" target="_blank" aria-label="Facebook profile of Patrick Attankurugu"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/patrickattankurugu400/" target="_blank" aria-label="LinkedIn profile of Patrick Attankurugu"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://patrickattankurugu.github.io/" target="_blank" aria-label="Portfolio of Patrick Attankurugu"><i class="fas fa-globe"></i></a>
+            </div>
+            
+            <div class="social-icons">
+                <span>Joseph Adasoogo: </span>
+                <a href="https://web.facebook.com/profile.php?id=100007181415802" target="_blank" aria-label="Facebook profile of Joseph Adasoogo"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/patrickattankurugu400/" target="_blank" aria-label="LinkedIn profile of Joseph Adasoogo"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
